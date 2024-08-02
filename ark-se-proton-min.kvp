@@ -34,7 +34,7 @@ App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{Map}}?listen?Port={{$GamePort}}?QueryPort={{$QueryPort}}?RCONEnabled=True?RCONServerGameLogBuffer=600?RCONPort={{$RCONPort}}?MultiHome={{$ApplicationIPBinding}}?{{$FormattedArgs}}{{CustomOptions}}?ServerAdminPassword={{$RemoteAdminPassword}} {{automanagedmods}}{{exclusivejoin}}{{BattlEye}}{{crossplay}}{{epiconly}}{{UseVivox}}{{UseDynamicConfig}}{{insecure}}{{EnableIdlePlayerKick}}{{NoHangDetection}}{{NoTransferFromFiltering}}{{AllowFlyerSpeedLeveling}}{{ForceAllowCaveFlyers}}{{nodinos}}{{PreventHibernation}}{{ForceRespawnDinos}}{{DisableRailgunPVP}}{{UseStructureStasisGrid}}{{AutoDestroyStructures}} -ActiveEvent={{ActiveEvent}} -PublicIPForEpic={{PublicIPForEpic}} -culture={{culture}} -ClusterDirOverride="{{ClusterDirOverride}}" -clusterid={{clusterid}} {{CustomFlags}} -servergamelog
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"SteamAppId":"346110","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"346110","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}"}
 App.CommandLineParameterFormat={0}={1}
 App.CommandLineParameterDelimiter=?
 App.ExitMethod=String
