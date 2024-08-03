@@ -17,7 +17,9 @@ chmod +x winetricks
 
 export WINETRICKS=winetricks
 
-pipx upgrade protontricks
+pipx install protontricks
+pipx update protontricks
+pipx ensurepath
 
 protontricks 376030 vcrun2013 vcrun2019 sound=disabled
 
