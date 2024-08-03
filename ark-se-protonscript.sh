@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#SCRIPT_NAME=$(echo \"$0\" | xargs readlink -f)
-#SCRIPTDIR=$(dirname "$SCRIPT_NAME")
+#SCRIPT_NAME="Proton Scripts part 1"
+#SCRIPTDIR=ProtonScripts/
 
 #exec 6>display.log
 #/usr/bin/Xvfb -displayfd 6 -nolisten tcp -nolisten unix &
@@ -13,18 +13,20 @@
 #rm display.log
 
 echo "downloading winetricks"
+mkdir ~/winetricks && cd ~/winetricks
 wget -N https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 chmod +x winetricks
+export WINETRICKS=/home/amp/winetricks/winetricks
 
-export WINETRICKS=winetricks
-
-echo "installing protontricks"
+echo "~~~~~~~~~~~~~"
+echo "~~~~installing protontricks~~~~~"
 pipx install protontricks
 pipx upgrade protontricks
 pipx ensurepath
-exec bash
+source ~/.bashrc
 
-echo "running protontricks"
+echo "~~~~~~~~~~~~~"
+echo "~~running protontricks~~"
 protontricks 376030 vcrun2013 vcrun2019 sound=disabled
 
 #exec 6>&-
