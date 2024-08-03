@@ -31,7 +31,7 @@ fi
 
 echo "~~~~~~~~~~~~~"
 echo "~~running protontricks~~"
-export STEAM_DIR=/arkse/
+export STEAM_DIR=/ark-se/
 protontricks 376030 vcrun2013 vcrun2019 sound=disabled
 
 #exec 6>&-
