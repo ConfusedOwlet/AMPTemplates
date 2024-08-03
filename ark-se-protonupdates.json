@@ -79,7 +79,7 @@
         "UpdateSourcePlatform":"Linux",
         "UpdateSource":"FetchURL",
         "UpdateSourceData":"https://github.com/ConfusedOwlet/AMPTemplates/raw/test/ark-se-protonscript.sh",
-        "UpdateSourceArgs":"protomscript.sh",
+        "UpdateSourceArgs":"protonscript.sh",
         "UpdateSourceTarget":"{{$FullInstanceDir}}",
         "OverwriteExistingFiles":true
     },
