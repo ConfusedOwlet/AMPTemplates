@@ -22,6 +22,7 @@ echo "installing protontricks"
 pipx install protontricks
 pipx upgrade protontricks
 pipx ensurepath
+exec bash
 
 echo "running protontricks"
 protontricks 376030 vcrun2013 vcrun2019 sound=disabled
