@@ -20,14 +20,18 @@ export WINETRICKS=/home/amp/winetricks/winetricks
 
 echo "~~~~~~~~~~~~~"
 echo "~~~~installing protontricks~~~~~"
-pipx install protontricks
-pipx upgrade protontricks
-pipx ensurepath
-source ~/.bashrc
+if command -v protontricks >&2; then
+  pipx upgrade protontricks
+  source ~/.bashrc
+else
+  pipx upgrade protontricks
+  pipx ensurepath
+  source ~/.bashrc
+fi
 
 echo "~~~~~~~~~~~~~"
 echo "~~running protontricks~~"
-export STEAM=/ark-se/
+export STEAM_DIR=/home/amp/Steam/
 protontricks 376030 vcrun2013 vcrun2019 sound=disabled
 
 #exec 6>&-
