@@ -12,15 +12,18 @@
 #read -r DPY_NUM < display.log
 #rm display.log
 
+echo "downloading winetricks"
 wget -N https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 chmod +x winetricks
 
 export WINETRICKS=winetricks
 
+echo "installing protontricks"
 pipx install protontricks
-pipx update protontricks
+pipx upgrade protontricks
 pipx ensurepath
 
+echo "running protontricks"
 protontricks 376030 vcrun2013 vcrun2019 sound=disabled
 
 #exec 6>&-
