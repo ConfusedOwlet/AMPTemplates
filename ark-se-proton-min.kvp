@@ -68,7 +68,7 @@ App.SteamForceLoginPrompt=False
 App.RapidStartup=False
 App.MonitorChildProcess=False
 App.MonitorChildProcessWaitMs=100
-App.MonitorChildProcessName=
+App.MonitorChildProcessName=^*.ShooterGameServer\.exe.*Port={{$GamePort}}.*$
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=RCONConnected

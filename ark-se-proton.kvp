@@ -10,10 +10,10 @@ Meta.ConfigManifest=ark-se-protonconfig.json
 Meta.MetaConfigManifest=ark-semetaconfig.json
 Meta.ConfigRoot=ark-se-proton.kvp
 Meta.MinAMPVersion=2.4.2.0
-Meta.SpecificDockerImage=
+Meta.SpecificDockerImage=confusedowlet/ampdocker:protontricks
 Meta.DockerRequired=False
-Meta.ContainerPolicy=Supported
-Meta.ContainerPolicyReason=
+Meta.ContainerPolicy=SupportedOnWindows, RecommendedOnLinux
+Meta.ContainerPolicyReason=The server requires Python3 and Proton/Protontricks to run on Linux. Using a container avoids the need to install these dependencies on the host.
 Meta.ExtraSetupStepsURI=https://discourse.cubecoders.com/docs?topic=3322?utm_source=ampcreate&utm_content=arkse
 Meta.Prerequsites=[]
 Meta.ExtraContainerPackages=[]
@@ -66,7 +66,7 @@ App.SteamForceLoginPrompt=False
 App.RapidStartup=False
 App.MonitorChildProcess=False
 App.MonitorChildProcessWaitMs=100
-App.MonitorChildProcessName=
+App.MonitorChildProcessName=^*.ShooterGameServer\.exe.*Port={{$GamePort}}.*$
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=RCONConnected
